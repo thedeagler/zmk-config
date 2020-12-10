@@ -3,20 +3,20 @@
 #SPDX-License-Identifier: MIT
  
  
-if SHIELD_SPLITREUS62_LEFT
+if SHIELD_DOOKEEB_LEFT
 
 config ZMK_KEYBOARD_NAME
-	default "Splitreus62 Left"
+	default "DooKeeb Left"
 
 endif
 
-if SHIELD_SPLITREUS62_RIGHT
+if SHIELD_DOOKEEB_RIGHT
 
 config ZMK_KEYBOARD_NAME
-	default "Splitreus62 Right"
+	default "DooKeeb Right"
 
 endif
 
-if SHIELD_SPLITREUS62_LEFT || SHIELD_SPLITREUS62_RIGHT
+if SHIELD_DOOKEEB_LEFT || SHIELD_DOOKEEB_RIGHT
 
 endif
