@@ -10,15 +10,15 @@ jobs:
       matrix:
         board: [proton_c, nice_nano, bluemicro840_v1, nrfmicro_13]
         shield:
-          - corne_left
-          - corne_right
-          - kyria_left
-          - kyria_right
-          - lily58_left
-          - lily58_right
-          - iris_left
-          - iris_right
-          - romac
+          # - corne_left
+          # - corne_right
+          # - kyria_left
+          # - kyria_right
+          # - lily58_left
+          # - lily58_right
+          # - iris_left
+          # - iris_right
+          # - romac
           - dookeeb_left
           - dookeeb_right
     steps:
