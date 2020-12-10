@@ -10,17 +10,8 @@ jobs:
       matrix:
         board: [nice_nano]
         shield:
-          - corne_left
-          - corne_right
-          - kyria_left
-          - kyria_right
-          - lily58_left
-          - lily58_right
-          - iris_left
-          - iris_right
-          - romac
-      - DooKeeb_left
-      - DooKeeb_right
+          - DooKeeb_left
+          - DooKeeb_right
         # include:
           # - board: proton_c
             # shield: clueboard_california
