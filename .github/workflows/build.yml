@@ -8,7 +8,7 @@ jobs:
     name: Build Test
     strategy:
       matrix:
-        board: [proton_c, nice_nano, bluemicro840_v1, nrfmicro_13]
+        board: [nice_nano]
         shield:
           # - corne_left
           # - corne_right
