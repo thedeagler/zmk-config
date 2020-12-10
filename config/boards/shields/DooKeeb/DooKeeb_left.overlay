@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "splitreus62.dtsi"
+#include "DooKeeb.dtsi"
 
 &kscan0 {
 	col-gpios
