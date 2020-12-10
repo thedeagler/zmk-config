@@ -64,7 +64,7 @@ jobs:
         uses: 'docker://zmkfirmware/zephyr-west-action-arm:latest'
         id: west-build-dookeeb-left
         with:
-          args: 'build "-s zmk/app -b nice_nano -- -DSHIELD=dookeeb_left -DZMK_CONFIG=/github/workspace/config/boards/shields/dookeeb"'
+          args: 'build "-s zmk/app -b nice_nano -- -DSHIELD=dookeeb_left -DZMK_CONFIG=/github/workspace/config"'
       - name: DooKeeb DTS File
         if: ${{ always() }}
         run: cat -n build/zephyr/nice_nano.dts.pre.tmp
@@ -81,7 +81,7 @@ jobs:
         uses: 'docker://zmkfirmware/zephyr-west-action-arm:latest'
         id: west-build-dookeeb-right
         with:
-          args: 'build "--pristine -s zmk/app -b nice_nano -- -DSHIELD=dookeeb_right -DZMK_CONFIG=/github/workspace/config/boards/shields/dookeeb"'
+          args: 'build "--pristine -s zmk/app -b nice_nano -- -DSHIELD=dookeeb_right -DZMK_CONFIG=/github/workspace/config"'
       - name: DooKeeb Right Kconfig file
         run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
       - name: Rename zmk.uf2
