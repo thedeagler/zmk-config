@@ -12,11 +12,14 @@
 
 &kscan0 {
 	col-gpios
-		= <&pro_micro_d 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-		, <&pro_micro_d 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-		, <&pro_micro_d 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-		, <&pro_micro_d  9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-		, <&pro_micro_d  8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-		, <&pro_micro_d  7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+		= <&pro_micro_d  3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // 020 c0
+		, <&pro_micro_d  4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // 022 c1
+		, <&pro_micro_d  5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // 024 c2
+		, <&pro_micro_d  6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // 100 c3
+		, <&pro_micro_d  7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // 011 c4
+		, <&pro_micro_d  8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // 104 c5
+		, <&pro_micro_d  9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // 106 c6
+		, <&pro_micro_d 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // 010 c7
+		, <&pro_micro_d 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // 009 c8
 		;
 };
