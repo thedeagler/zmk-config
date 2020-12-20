@@ -33,17 +33,6 @@
 &kp ESC    &kp ESC            &kp LCTRL &kp LALT &kp LGUI &kp SPACE         &kp ESC                            &kp SPACE          &kp RGUI &kp RALT       &kp LEFT  &kp DOWN &kp RIGHT
 			>;
 		};
-
-		misc_layer {
-			bindings = <
-              &none  &none  &none  &none  &none  &none  &none                 &none    &none  &none  &none  &none  &none  &none  
-&none  &none  &none  &none  &none  &none  &none  &none  &none                 &none    &none  &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none  &none  &none               &none    &none    &none  &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none  &none  &none               &none    &none    &none  &none  &none  &none         &reset &none 
-&none  &none  &none  &none  &none  &none  &none  &none                        &none    &none  &none  &none  &none  &none  &none  &none 
-&none  &none  &none  &none  &none  &none         &none                                 &none         &none  &none  &none  &none  &none
-			>;
-		};
 	};
 };
 
