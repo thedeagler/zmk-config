@@ -23,7 +23,7 @@
 &kp a   &kp a            &kp TAB      &kp Q        &kp W    &kp E     &kp R  &kp T       &kp Y &kp U      &kp I       &kp O      &kp P      &kp LBKT     &kp RBKT     &kp BSLH &kp END 
 &kp a   &kp a            &kp CAPS     &kp A        &kp S    &kp D     &kp F  &kp G       &kp H &kp J      &kp K       &kp L      &kp SEMI   &kp APOS                  &kp RET  &kp PG_UP 
 &kp a   &kp a            &kp LSHFT    &kp Z        &kp X    &kp C     &kp V  &kp B             &kp N      &kp M       &kp COMMA  &kp DOT    &kp FSLH     &kp RSHFT    &kp UP   &kp PG_DN 
-&mo FUN &kp a            &kp LCTRL    &kp LALT     &kp LCMD &kp SPACE        &mo WIN                      &kp SPACE              &kp RCMD   &kp RALT     &kp LEFT     &kp DOWN &kp RIGHT
+&mo 0 &kp a            &kp LCTRL    &kp LALT     &kp LCMD &kp SPACE        &mo 0                      &kp SPACE              &kp RCMD   &kp RALT     &kp LEFT     &kp DOWN &kp RIGHT
 			>;
 		};
 	};
