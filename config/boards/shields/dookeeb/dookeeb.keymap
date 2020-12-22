@@ -34,6 +34,44 @@
 &mo FUN &kp a            &kp LCTRL    &kp LALT     &kp LCMD &kp SPACE        &mo WIN                      &kp SPACE              &kp RCMD   &kp RALT     &kp LEFT     &kp DOWN &kp RIGHT
 			>;
 		};
+
+		win_layer {
+//            _____________________________           _____________________________
+//  _______  |   || f1| f2| f3| f4|| f5| f6|         | f7| f8|| f9|f10|f11|f12||   |___
+// | b | b | |   |   |   |   |   |   |   |         |   |   |   |   |   |   |       |   |
+// | b | b | |     |   |   |   |   |   |         |   |   |   |   |   |   |   |     |   |
+// | b | b | |      |   |   |   |   |   |         |   |   |   |   |   |   |        |   |
+// | b | b | |        |   |   |   |   |   |         |   |   |   |   |   |      |   |   |
+// |   | b | | ctl| win| alt|        | MAC|         |          | alt| ctl| |   |   |   | // toggle to MAC layer for maybe media key support
+
+			bindings = <
+              &trans &kp F1    &kp F2   &kp F3   &kp F4  &kp F5  &kp F6              &kp F7  &kp F8 &kp F9 &kp F10  &kp F11   &kp F12 &trans 
+&kp b  &kp b  &trans &trans    &trans   &trans   &trans  &trans  &trans              &trans  &trans &trans &trans   &trans    &trans  &trans  &trans
+&kp b  &kp b         &trans    &trans   &trans   &trans  &trans  &trans      &trans  &trans  &trans &trans &trans   &trans    &trans  &trans  &trans
+&kp b  &kp b         &trans    &trans   &trans   &trans  &trans  &trans      &trans  &trans  &trans &trans &trans   &trans            &trans  &trans 
+&kp b  &kp b         &trans    &trans   &trans   &trans  &trans  &trans              &trans  &trans &trans &trans   &trans    &trans  &trans  &trans 
+&trans &kp b         &kp LCTRL &kp LWIN &kp LALT &trans          &mo MAC                     &trans        &kp RALT &kp RCTRL &trans  &trans  &trans
+			>;
+		};
+		
+		kb_layer {
+//            ______________________________         ______________________________
+// __________|rst||böt| x | x | x || x | x |         | x | x || x | x | x | x || x |___
+// | c | c | |btc|bt1|bt2|bt3|bt4|bt5| x |         | x | x | x | x | x | x |   x   | x |
+// | c | c | |  x  | x | x | x | x | x |         | x | x | x | x | x | x | x |  x  | x |
+// | c | c | |   x  | x | x | x | x | x |         | x | x | x | x | x | x |    x   | x |
+// | c | c | |    x   | x | x | x | x | x |         | x | x | x | x | x |   x  | x | x |
+// | c | c | |  x | to1| to2|    x   |  x |         |     x    |  x |  x | | x | x | x |
+
+			bindings = <
+             &reset     &bootloader  &none         &none         &none        &none        &none            &none &none &none &none &none &none &none
+&kp c &kp c  &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3 &bt BT_SEL 4 &none            &none &none &none &none &none &none &none &none
+&kp c &kp c             &none        &none         &none         &none        &none        &none      &none &none &none &none &none &none &none &none &none
+&kp c &kp c             &none        &none         &none         &none        &none        &none      &none &none &none &none &none &none       &none &none 
+&kp c &kp c             &none        &none         &none         &none        &none        &none            &none &none &none &none &none &none &none &none 
+&kp c &kp c             &none        &tog 1        &tog 0        &none                     &none                  &none       &none &none &none &none &none
+			>;
+		};
 	};
 };
 
