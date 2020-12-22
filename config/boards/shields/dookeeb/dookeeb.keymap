@@ -18,20 +18,20 @@
 
 		mac_layer {
 //            ______________________________         ______________________________
-// __________|esc||bup|bdn| f3| f4|| f5| f6|         | ⏪| ⏸|| ⏩| 🔇| 🔈-| 🔈+||del|____
+// __________|esc||bup|bdn| f3| f4|| f5| f6|         | ⏪| ⏸|| ⏩| 🔇| 🔈-| 🔈+||del|___  // Media key support is in progress, and may not work
 // | a | a | | ` | 1 | 2 | 3 | 4 | 5 | 6 |         | 7 | 8 | 9 | 0 | - | = |  bsp  |hom|
 // | a | a | | tab | q | w | e | r | t |         | y | u | i | o | p | [ | ] |  \  |end|
 // | a | a | |  cap | a | s | d | f | g |         | h | j | k | l | ; | ' |   ent  |pgu|
 // | a | a | |   shf  | z | x | c | v | b |         | n | m | , | . | / |  shf | ua|pgd|
-// |mo2| a | | ctl| alt| cmd|   spc  | mo1|         |    spc   | cmd| alt| | la| da| ra|
+// |FUN| a | | ctl| alt| cmd|   spc  | WIN|         |    spc   | cmd| alt| | la| da| ra|
 
 			bindings = <
-             &kp ESC   &kp C_BRI_UP &kp C_BRI_DN &kp F3   &kp F4    &kp F5 &kp F6            &kp C_PREV &kp C_PAUSE &kp C_NEXT &kp K_MUTE &kp K_VOL_DN &kp K_VOL_UP &kp DEL 
-&kp a &kp a  &kp GRAVE &kp N1       &kp N2       &kp N3   &kp N4    &kp N5 &kp N6            &kp N7     &kp N8      &kp N9     &kp N0     &kp MINUS    &kp EQUAL    &kp BSPC &kp HOME
-&kp a &kp a            &kp TAB      &kp Q        &kp W    &kp E     &kp R  &kp T       &kp Y &kp U      &kp I       &kp O      &kp P      &kp LBKT     &kp RBKT     &kp BSLH &kp END 
-&kp a &kp a            &kp CAPS     &kp A        &kp S    &kp D     &kp F  &kp G       &kp H &kp J      &kp K       &kp L      &kp SEMI   &kp APOS                  &kp RET  &kp PG_UP 
-&kp a &kp a            &kp LSHFT    &kp Z        &kp X    &kp C     &kp V  &kp B             &kp N      &kp M       &kp COMMA  &kp DOT    &kp FSLH     &kp RSHFT    &kp UP   &kp PG_DN 
-&mo 2 &kp a            &kp LCTRL    &kp LALT     &kp LCMD &kp SPACE        &mo 1                        &kp SPACE              &kp RCMD   &kp RALT     &kp LEFT     &kp DOWN &kp RIGHT
+               &kp ESC   &kp C_BRI_UP &kp C_BRI_DN &kp F3   &kp F4    &kp F5 &kp F6            &kp C_PREV &kp C_PAUSE &kp C_NEXT &kp K_MUTE &kp K_VOL_DN &kp K_VOL_UP &kp DEL 
+&kp a   &kp a  &kp GRAVE &kp N1       &kp N2       &kp N3   &kp N4    &kp N5 &kp N6            &kp N7     &kp N8      &kp N9     &kp N0     &kp MINUS    &kp EQUAL    &kp BSPC &kp HOME
+&kp a   &kp a            &kp TAB      &kp Q        &kp W    &kp E     &kp R  &kp T       &kp Y &kp U      &kp I       &kp O      &kp P      &kp LBKT     &kp RBKT     &kp BSLH &kp END 
+&kp a   &kp a            &kp CAPS     &kp A        &kp S    &kp D     &kp F  &kp G       &kp H &kp J      &kp K       &kp L      &kp SEMI   &kp APOS                  &kp RET  &kp PG_UP 
+&kp a   &kp a            &kp LSHFT    &kp Z        &kp X    &kp C     &kp V  &kp B             &kp N      &kp M       &kp COMMA  &kp DOT    &kp FSLH     &kp RSHFT    &kp UP   &kp PG_DN 
+&mo FUN &kp a            &kp LCTRL    &kp LALT     &kp LCMD &kp SPACE        &mo WIN                      &kp SPACE              &kp RCMD   &kp RALT     &kp LEFT     &kp DOWN &kp RIGHT
 			>;
 		};
 
@@ -42,7 +42,7 @@
 // | b | b | |     |   |   |   |   |   |         |   |   |   |   |   |   |   |     |   |
 // | b | b | |      |   |   |   |   |   |         |   |   |   |   |   |   |        |   |
 // | b | b | |        |   |   |   |   |   |         |   |   |   |   |   |      |   |   |
-// |   | b | | ctl| win| alt|        | mo0|         |          | alt| ctl| |   |   |   |
+// |   | b | | ctl| win| alt|        | MAC|         |          | alt| ctl| |   |   |   | // toggle to MAC layer for maybe media key support
 
 			bindings = <
               &trans &kp F1    &kp F2   &kp F3   &kp F4  &kp F5  &kp F6              &kp F7  &kp F8 &kp F9 &kp F10  &kp F11   &kp F12 &trans 
@@ -50,7 +50,7 @@
 &kp b  &kp b         &trans    &trans   &trans   &trans  &trans  &trans      &trans  &trans  &trans &trans &trans   &trans    &trans  &trans  &trans
 &kp b  &kp b         &trans    &trans   &trans   &trans  &trans  &trans      &trans  &trans  &trans &trans &trans   &trans            &trans  &trans 
 &kp b  &kp b         &trans    &trans   &trans   &trans  &trans  &trans              &trans  &trans &trans &trans   &trans    &trans  &trans  &trans 
-&trans &kp b         &kp LCTRL &kp LWIN &kp LALT &trans          &mo 0                       &trans        &kp RALT &kp RCTRL &trans  &trans  &trans
+&trans &kp b         &kp LCTRL &kp LWIN &kp LALT &trans          &mo MAC                     &trans        &kp RALT &kp RCTRL &trans  &trans  &trans
 			>;
 		};
 		
@@ -75,8 +75,8 @@
 	};
 };
 
-// _________________________________________         ___________________________________
-//           | x || x | x | x | x || x | x |         | x | x || x | x | x | x || x |    
+//            _____________________________           _____________________________
+//  _______  | x || x | x | x | x || x | x |         | x | x || x | x | x | x || x |___
 // | x | x | | x | x | x | x | x | x | x |         | x | x | x | x | x | x |   x   | x |
 // | x | x | |  x  | x | x | x | x | x |         | x | x | x | x | x | x | x |  x  | x |
 // | x | x | |   x  | x | x | x | x | x |         | x | x | x | x | x | x |    x   | x |
