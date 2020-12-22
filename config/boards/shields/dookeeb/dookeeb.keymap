@@ -8,30 +8,77 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
-#define DEFAULT 0
-#define MISC 1
+#define MAC 0
+#define WIN 1
+#define FUN 2
 
 / {
 	keymap {
 		compatible = "zmk,keymap";
 
-		default_layer {
-// _________________________________________                               ___________________________________
-// | x |     | x || x | x | x | x || x | x |                               | x | x || x | x | x | x || x |    
-// | x | x | | x | x | x | x | x | x | x |                               | x | x | x | x | x | x |   x   | x |
-// | x | x | |  x  | x | x | x | x | x |                               | x | x | x | x | x | x | x |  x  | x |
-// | x | x | |   x  | x | x | x | x | x |                               | x | x | x | x | x | x |    x   | x |
-// | x | x | |    x   | x | x | x | x | x |                               | x | x | x | x | x |   x  | x | x |
-// | x | x | |  x |  x |  x |    x   |  x |                               |     x    |  x |  x | | x | x | x |
+		mac_layer {
+//            ______________________________         ______________________________
+// __________|esc||bup|bdn| f3| f4|| f5| f6|         | ⏪| ⏸|| ⏩| 🔇| 🔈-| 🔈+||del|____
+// | a | a | | ` | 1 | 2 | 3 | 4 | 5 | 6 |         | 7 | 8 | 9 | 0 | - | = |  bsp  |hom|
+// | a | a | | tab | q | w | e | r | t |         | y | u | i | o | p | [ | ] |  \  |end|
+// | a | a | |  cap | a | s | d | f | g |         | h | j | k | l | ; | ' |   ent  |pgu|
+// | a | a | |   shf  | z | x | c | v | b |         | n | m | , | . | / |  shf | ua|pgd|
+// |mo2| a | | ctl| alt| cmd|   spc  | mo1|         |    spc   | cmd| alt| | la| da| ra|
 
 			bindings = <
-                    &kp ESC   &kp F1    &kp F2   &kp F3   &kp F4   &kp F5   &kp F6                    &kp F7   &kp F8   &kp F9    &kp F10  &kp F11        &kp F12   &kp DEL 
-&reset     &kp ESC  &kp GRAVE &kp N1    &kp N2   &kp N3   &kp N4   &kp N5   &kp N6                    &kp N7   &kp N8   &kp N9    &kp N0   &kp MINUS      &kp EQUAL &kp BSPC &kp HOME
-&bt BT_CLR &kp ESC            &kp TAB   &kp Q    &kp W    &kp E    &kp R    &kp T            &kp Y    &kp U    &kp I    &kp O     &kp P    &kp LBKT       &kp RBKT  &kp BSLH &kp END 
-&kp ESC    &kp ESC            &kp CAPS  &kp A    &kp S    &kp D    &kp F    &kp G            &kp H    &kp J    &kp K    &kp L     &kp SEMI &kp APOS                 &kp RET  &kp PG_UP 
-&kp ESC    &kp ESC            &kp LSHFT &kp Z    &kp X    &kp C    &kp V    &kp B                     &kp N    &kp M    &kp COMMA &kp DOT  &kp FSLH  &kp RSHFT &kp UP   &kp PG_DN 
-&kp ESC    &kp ESC            &kp LCTRL &kp LALT &kp LGUI &kp SPACE         &kp ESC                            &kp SPACE          &kp RGUI &kp RALT       &kp LEFT  &kp DOWN &kp RIGHT
+             &kp ESC   &kp C_BRI_UP &kp C_BRI_DN &kp F3   &kp F4    &kp F5 &kp F6            &kp C_PREV &kp C_PAUSE &kp C_NEXT &kp K_MUTE &kp K_VOL_DN &kp K_VOL_UP &kp DEL 
+&kp a &kp a  &kp GRAVE &kp N1       &kp N2       &kp N3   &kp N4    &kp N5 &kp N6            &kp N7     &kp N8      &kp N9     &kp N0     &kp MINUS    &kp EQUAL    &kp BSPC &kp HOME
+&kp a &kp a            &kp TAB      &kp Q        &kp W    &kp E     &kp R  &kp T       &kp Y &kp U      &kp I       &kp O      &kp P      &kp LBKT     &kp RBKT     &kp BSLH &kp END 
+&kp a &kp a            &kp CAPS     &kp A        &kp S    &kp D     &kp F  &kp G       &kp H &kp J      &kp K       &kp L      &kp SEMI   &kp APOS                  &kp RET  &kp PG_UP 
+&kp a &kp a            &kp LSHFT    &kp Z        &kp X    &kp C     &kp V  &kp B             &kp N      &kp M       &kp COMMA  &kp DOT    &kp FSLH     &kp RSHFT    &kp UP   &kp PG_DN 
+&mo 2 &kp a            &kp LCTRL    &kp LALT     &kp LCMD &kp SPACE        &mo 1                        &kp SPACE              &kp RCMD   &kp RALT     &kp LEFT     &kp DOWN &kp RIGHT
+			>;
+		};
+
+		win_layer {
+//            _____________________________           _____________________________
+//  _______  |   || f1| f2| f3| f4|| f5| f6|         | f7| f8|| f9|f10|f11|f12||   |___
+// | b | b | |   |   |   |   |   |   |   |         |   |   |   |   |   |   |       |   |
+// | b | b | |     |   |   |   |   |   |         |   |   |   |   |   |   |   |     |   |
+// | b | b | |      |   |   |   |   |   |         |   |   |   |   |   |   |        |   |
+// | b | b | |        |   |   |   |   |   |         |   |   |   |   |   |      |   |   |
+// |   | b | | ctl| win| alt|        | mo0|         |          | alt| ctl| |   |   |   |
+
+			bindings = <
+              &trans &kp F1    &kp F2   &kp F3   &kp F4  &kp F5  &kp F6              &kp F7  &kp F8 &kp F9 &kp F10  &kp F11   &kp F12 &trans 
+&kp b  &kp b  &trans &trans    &trans   &trans   &trans  &trans  &trans              &trans  &trans &trans &trans   &trans    &trans  &trans  &trans
+&kp b  &kp b         &trans    &trans   &trans   &trans  &trans  &trans      &trans  &trans  &trans &trans &trans   &trans    &trans  &trans  &trans
+&kp b  &kp b         &trans    &trans   &trans   &trans  &trans  &trans      &trans  &trans  &trans &trans &trans   &trans            &trans  &trans 
+&kp b  &kp b         &trans    &trans   &trans   &trans  &trans  &trans              &trans  &trans &trans &trans   &trans    &trans  &trans  &trans 
+&trans &kp b         &kp LCTRL &kp LWIN &kp LALT &trans          &mo 0                       &trans        &kp RALT &kp RCTRL &trans  &trans  &trans
+			>;
+		};
+		
+		kb_layer {
+//            ______________________________         ______________________________
+// __________|rst||böt| x | x | x || x | x |         | x | x || x | x | x | x || x |___
+// | c | c | |btc|bt1|bt2|bt3|bt4|bt5| x |         | x | x | x | x | x | x |   x   | x |
+// | c | c | |  x  | x | x | x | x | x |         | x | x | x | x | x | x | x |  x  | x |
+// | c | c | |   x  | x | x | x | x | x |         | x | x | x | x | x | x |    x   | x |
+// | c | c | |    x   | x | x | x | x | x |         | x | x | x | x | x |   x  | x | x |
+// | c | c | |  x | to1| to2|    x   |  x |         |     x    |  x |  x | | x | x | x |
+
+			bindings = <
+             &reset     &bootloader  &none         &none         &none        &none        &none            &none &none &none &none &none &none &none
+&kp c &kp c  &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3 &bt BT_SEL 4 &none            &none &none &none &none &none &none &none &none
+&kp c &kp c             &none        &none         &none         &none        &none        &none      &none &none &none &none &none &none &none &none &none
+&kp c &kp c             &none        &none         &none         &none        &none        &none      &none &none &none &none &none &none       &none &none 
+&kp c &kp c             &none        &none         &none         &none        &none        &none            &none &none &none &none &none &none &none &none 
+&kp c &kp c             &none        &tog 1        &tog 0        &none                     &none                  &none       &none &none &none &none &none
 			>;
 		};
 	};
 };
+
+// _________________________________________         ___________________________________
+//           | x || x | x | x | x || x | x |         | x | x || x | x | x | x || x |    
+// | x | x | | x | x | x | x | x | x | x |         | x | x | x | x | x | x |   x   | x |
+// | x | x | |  x  | x | x | x | x | x |         | x | x | x | x | x | x | x |  x  | x |
+// | x | x | |   x  | x | x | x | x | x |         | x | x | x | x | x | x |    x   | x |
+// | x | x | |    x   | x | x | x | x | x |         | x | x | x | x | x |   x  | x | x |
+// | x | x | |  x |  x |  x |    x   |  x |         |     x    |  x |  x | | x | x | x |
