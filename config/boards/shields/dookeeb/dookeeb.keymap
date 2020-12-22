@@ -9,6 +9,8 @@
 #include <dt-bindings/zmk/keys.h>
 
 #define MAC 0
+#define WIN 1
+#define FUN 2
 
 / {
 	keymap {
