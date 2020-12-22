@@ -10,7 +10,7 @@
 
 #define MAC 0
 #define WIN 1
-#define FUN 2
+#define ADJ 2
 
 / {
 	keymap {
@@ -22,7 +22,7 @@
 // | a | a | | tab | q | w | e | r | t |         | y | u | i | o | p | [ | ] |  \  |end|
 // | a | a | |  cap | a | s | d | f | g |         | h | j | k | l | ; | ' |   ent  |pgu|
 // | a | a | |   shf  | z | x | c | v | b |         | n | m | , | . | / |  shf | ua|pgd|
-// |FUN| a | | ctl| alt| cmd|   spc  | WIN|         |    spc   | cmd| alt| | la| da| ra|
+// |ADJ| a | | ctl| alt| cmd|   spc  | WIN|         |    spc   | cmd| alt| | la| da| ra|
 		mac_layer {
 			bindings = <
                &kp ESC   &kp C_BRI_UP &kp C_BRI_DN &kp F3   &kp F4    &kp F5 &kp F6            &kp C_PREV &kp C_PAUSE &kp C_NEXT &kp K_MUTE &kp K_VOL_DN &kp K_VOL_UP &kp DEL 
@@ -30,7 +30,7 @@
 &kp A   &kp A            &kp TAB      &kp Q        &kp W    &kp E     &kp R  &kp T       &kp Y &kp U      &kp I       &kp O      &kp P      &kp LBKT     &kp RBKT     &kp BSLH &kp END 
 &kp A   &kp A            &kp CAPS     &kp A        &kp S    &kp D     &kp F  &kp G       &kp H &kp J      &kp K       &kp L      &kp SEMI   &kp APOS                  &kp RET  &kp PG_UP 
 &kp A   &kp A            &kp LSHFT    &kp Z        &kp X    &kp C     &kp V  &kp B             &kp N      &kp M       &kp COMMA  &kp DOT    &kp FSLH     &kp RSHFT    &kp UP   &kp PG_DN 
-&mo FUN &kp A            &kp LCTRL    &kp LALT     &kp LCMD &kp SPACE        &mo WIN                      &kp SPACE              &kp RCMD   &kp RALT     &kp LEFT     &kp DOWN &kp RIGHT
+&mo ADJ &kp A            &kp LCTRL    &kp LALT     &kp LCMD &kp SPACE        &mo WIN                      &kp SPACE              &kp RCMD   &kp RALT     &kp LEFT     &kp DOWN &kp RIGHT
 			>;
 		};
 
@@ -53,15 +53,15 @@
 		};
 		
 //            ______________________________         ______________________________
-// __________|rst||böt| x | x | x || x | x |         | x | x || x | x | x | x || x |___
+// __________|rst|| x | x | x | x || x | x |         | x | x || x | x | x | x || x |___
 // | c | c | |btc|bt1|bt2|bt3|bt4|bt5| x |         | x | x | x | x | x | x |   x   | x |
 // | c | c | |  x  | x | x | x | x | x |         | x | x | x | x | x | x | x |  x  | x |
 // | c | c | |   x  | x | x | x | x | x |         | x | x | x | x | x | x |    x   | x |
 // | c | c | |    x   | x | x | x | x | x |         | x | x | x | x | x |   x  | x | x |
 // | c | c | |  x | to1| to2|    x   |  x |         |     x    |  x |  x | | x | x | x |
-		kb_layer {
+		adjust_layer {
 			bindings = <
-             &reset     &bootloader  &none         &none         &none        &none        &none            &none &none &none &none &none &none &none
+             &reset     &none        &none         &none         &none        &none        &none            &none &none &none &none &none &none &none
 &kp C &kp C  &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3 &bt BT_SEL 4 &none            &none &none &none &none &none &none &none &none
 &kp C &kp C             &none        &none         &none         &none        &none        &none      &none &none &none &none &none &none &none &none &none
 &kp C &kp C             &none        &none         &none         &none        &none        &none      &none &none &none &none &none &none       &none &none 
@@ -79,3 +79,4 @@
 // | x | x | |   x  | x | x | x | x | x |         | x | x | x | x | x | x |    x   | x |
 // | x | x | |    x   | x | x | x | x | x |         | x | x | x | x | x |   x  | x | x |
 // | x | x | |  x |  x |  x |    x   |  x |         |     x    |  x |  x | | x | x | x |
+
