@@ -34,7 +34,6 @@
 &mo FUN &kp a            &kp LCTRL    &kp LALT     &kp LCMD &kp SPACE        &mo WIN                      &kp SPACE              &kp RCMD   &kp RALT     &kp LEFT     &kp DOWN &kp RIGHT
 			>;
 		};
-
 		win_layer {
 //            _____________________________           _____________________________
 //  _______  |   || f1| f2| f3| f4|| f5| f6|         | f7| f8|| f9|f10|f11|f12||   |___
@@ -53,7 +52,6 @@
 &trans &kp b         &kp LCTRL &kp LWIN &kp LALT &trans          &mo MAC                     &trans        &kp RALT &kp RCTRL &trans  &trans  &trans
 			>;
 		};
-		
 		kb_layer {
 //            ______________________________         ______________________________
 // __________|rst||böt| x | x | x || x | x |         | x | x || x | x | x | x || x |___
