@@ -8,6 +8,9 @@ if SHIELD_DOOKEEB_LEFT
 config ZMK_KEYBOARD_NAME
 	default "DooKeeb Left"
 
+config ZMK_SPLIT_BLE_ROLE_CENTRAL
+	default y
+
 endif
 
 if SHIELD_DOOKEEB_RIGHT
@@ -18,5 +21,8 @@ config ZMK_KEYBOARD_NAME
 endif
 
 if SHIELD_DOOKEEB_LEFT || SHIELD_DOOKEEB_RIGHT
+
+config ZMK_SPLIT
+	default y
 
 endif
