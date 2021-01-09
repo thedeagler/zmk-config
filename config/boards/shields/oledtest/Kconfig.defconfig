@@ -1,0 +1,15 @@
+
+#Copyright (c) 2020 Derek Schmell
+#SPDX-License-Identifier: MIT
+ 
+ 
+if SHIELD_OLEDTEST
+
+config ZMK_KEYBOARD_NAME
+	default "Oled Test"
+
+endif
+
+if SHIELD_OLEDTEST
+
+endif

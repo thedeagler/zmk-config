@@ -10,8 +10,8 @@ jobs:
       matrix:
         board: [nice_nano]
         shield:
-          # - corne_left
-          # - corne_right
+          - corne_left
+          - corne_right
           # - kyria_left
           # - kyria_right
           # - lily58_left
@@ -21,6 +21,7 @@ jobs:
           # - romac
           - dookeeb_left
           - dookeeb_right
+          - oledtest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
