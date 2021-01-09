@@ -12,21 +12,21 @@
 		compatible = "zmk,keymap";
 
 		default {
-			label = "❖Æ¥";
+			label = "x❖xÆx¥";
 			bindings = <
 				&mo 1 &mo 2
 			>;
 		};
 
 		win {
-			label = "²öÿł";
+			label = "²xöxÿxł";
 			bindings = <
 				&kp N1 &kp N2
 			>;
 		};
 
 		mac {
-			label = "😀親おやすみなさ";
+			label = "x親おxやすみなさ";
 			bindings = <
 				&kp A &kp B
 			>;
