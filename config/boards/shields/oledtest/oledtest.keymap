@@ -13,7 +13,19 @@
 
 		default {
 			bindings = <
+				&mo 1 &mo 2
+			>;
+		};
+
+		win {
+			bindings = <
 				&kp N1 &kp N2
+			>;
+		};
+
+		mac {
+			bindings = <
+				&kp A &kp B
 			>;
 		};
 	};

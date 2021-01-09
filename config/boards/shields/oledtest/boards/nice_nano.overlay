@@ -1,0 +1,7 @@
+
+
+&i2c0 {
+	compatible = "nordic,nrf-twi";
+	sda-pin = <6>;
+	scl-pin = <8>;
+};
