@@ -90,7 +90,7 @@ jobs:
       - name: Archive
         uses: actions/upload-artifact@v2
         with:
-          name: firmware
+          name: ${{ steps.variables.outputs.artifact-name }}
           path: ${{ steps.variables.outputs.artifact-name }}.uf2
       # - name: West Build (DooKeeb Right)
       #   uses: 'docker://zmkfirmware/zephyr-west-action-arm:latest'
