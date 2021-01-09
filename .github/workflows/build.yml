@@ -12,13 +12,6 @@ jobs:
         shield:
           - corne_left
           - corne_right
-          # - kyria_left
-          # - kyria_right
-          # - lily58_left
-          # - lily58_right
-          # - iris_left
-          # - iris_right
-          # - romac
           - dookeeb_left
           - dookeeb_right
           - oledtest
@@ -79,11 +72,11 @@ jobs:
       - name: West Build
         uses: 'docker://zmkfirmware/zephyr-west-action-arm:latest'
         with:
-          args: 'build "-s zmk/app -b nice_nano -- ${{ steps.variables.outputs.shield-arg }} -DZMK_CONFIG=/github/workspace/config"'
+          args: 'build "-s zmk/app -b ${{ matrix.board }} -- ${{ steps.variables.outputs.shield-arg }} -DZMK_CONFIG=/github/workspace/config"'
       - name: DTS File
         if: ${{ always() }}
-        run: cat -n build/zephyr/nice_nano.dts.pre.tmp
-      - name: Kconfig file
+        run: cat -n build/zephyr/${{ matrix.board }}.dts.pre.tmp
+      - name: Configure KConfig
         run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
       - name: Rename zmk.uf2
         run: cp build/zephyr/zmk.uf2 ${{ steps.variables.outputs.artifact-name }}.uf2
@@ -92,17 +85,3 @@ jobs:
         with:
           name: ${{ steps.variables.outputs.artifact-name }}
           path: ${{ steps.variables.outputs.artifact-name }}.uf2
-      # - name: West Build (DooKeeb Right)
-      #   uses: 'docker://zmkfirmware/zephyr-west-action-arm:latest'
-      #   id: west-build-dookeeb-right
-      #   with:
-      #     args: 'build "--pristine -s zmk/app -b nice_nano -- -DSHIELD=dookeeb_right -DZMK_CONFIG=/github/workspace/config"'
-      # - name: DooKeeb Right Kconfig file
-      #   run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
-      # - name: Rename zmk.uf2
-      #   run: cp build/zephyr/zmk.uf2 dookeeb_right_nice_nano.uf2
-      # - name: Archive (DooKeeb Right)
-      #   uses: actions/upload-artifact@v2
-      #   with:
-      #     name: firmware
-      #     path: dookeeb_right_nice_nano.uf2
