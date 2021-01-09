@@ -12,18 +12,21 @@
 		compatible = "zmk,keymap";
 
 		default {
+			label = "DEF";
 			bindings = <
 				&mo 1 &mo 2
 			>;
 		};
 
 		win {
+			label = "WIN";
 			bindings = <
 				&kp N1 &kp N2
 			>;
 		};
 
 		mac {
+			label = "MAC";
 			bindings = <
 				&kp A &kp B
 			>;
