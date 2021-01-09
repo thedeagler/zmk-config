@@ -12,21 +12,21 @@
 		compatible = "zmk,keymap";
 
 		default {
-			label = "lowercase test";
+			label = "❖Æ¥";
 			bindings = <
 				&mo 1 &mo 2
 			>;
 		};
 
 		win {
-			label = "this is a length test of how long the label can be";
+			label = "²öÿł";
 			bindings = <
 				&kp N1 &kp N2
 			>;
 		};
 
 		mac {
-			label = "#15&*)%😀";
+			label = "😀親おやすみなさ";
 			bindings = <
 				&kp A &kp B
 			>;
