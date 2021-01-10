@@ -5,8 +5,9 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/ext_power.h>
 
 #define MAC 0
 #define WIN 1
@@ -43,33 +44,33 @@
 // | b | b | |        |   |   |   |   |   |         |   |   |   |   |   |      |   |   |
 // |   | b | | ctl| win| alt|        | MAC|         |          | alt| ctl| |   |   |   | // toggle to MAC layer for maybe media key support
 		win_layer {
-			label = "win";
+			label = "windows";
 			bindings = <
               &trans &kp F1    &kp F2   &kp F3   &kp F4  &kp F5  &kp F6              &kp F7  &kp F8 &kp F9 &kp F10  &kp F11   &kp F12 &trans 
 &kp B  &kp B  &trans &trans    &trans   &trans   &trans  &trans  &trans              &trans  &trans &trans &trans   &trans    &trans  &trans  &trans
 &kp B  &kp B         &trans    &trans   &trans   &trans  &trans  &trans      &trans  &trans  &trans &trans &trans   &trans    &trans  &trans  &trans
 &kp B  &kp B         &trans    &trans   &trans   &trans  &trans  &trans      &trans  &trans  &trans &trans &trans   &trans            &trans  &trans 
 &kp B  &kp B         &trans    &trans   &trans   &trans  &trans  &trans              &trans  &trans &trans &trans   &trans    &trans  &trans  &trans 
-&trans &kp B         &kp LCTRL &kp LWIN &kp LALT &trans          &mo MAC                     &trans        &kp RALT &kp RCTRL &trans  &trans  &trans
+&trans &kp B         &kp LCTRL &kp LWIN &kp LALT &trans          &mo LCTRL                   &trans        &kp RALT &kp RCTRL &trans  &trans  &trans
 			>;
 		};
 		
 //            ______________________________         ______________________________
 // __________|rst|| x | x | x | x || x | x |         | x | x || x | x | x | x || x |___
-// | c | c | |btc|bt1|bt2|bt3|bt4|bt5| x |         | x | x | x | x | x | x |   x   | x |
-// | c | c | |  x  | x | x | x | x | x |         | x | x | x | x | x | x | x |  x  | x |
+// |OUT| c | |btc|bt1|bt2|bt3|bt4| x | x |         | x | x | x | x | x |bt0|   x   | x |
+// |EXT| c | |  x  | x | x | x | x | x |         | x | x | x | x | x | x | x |  x  | x |
 // | c | c | |   x  | x | x | x | x | x |         | x | x | x | x | x | x |    x   | x |
 // | c | c | |    x   | x | x | x | x | x |         | x | x | x | x | x |   x  | x | x |
 // | c | c | |  x | to1| to2|    x   |  x |         |     x    |  x |  x | | x | x | x |
 		adjust_layer {
-			label = "adj";
+			label = "settings";
 			bindings = <
-             &reset     &none        &none         &none         &none        &none        &none            &none &none &none &none &none &none &none
-&kp C &kp C  &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3 &bt BT_SEL 4 &none            &none &none &none &none &none &none &none &none
-&kp C &kp C             &none        &none         &none         &none        &none        &none      &none &none &none &none &none &none &none &none &none
-&kp C &kp C             &none        &none         &none         &none        &none        &none      &none &none &none &none &none &none       &none &none 
-&kp C &kp C             &none        &none         &none         &none        &none        &none            &none &none &none &none &none &none &none &none 
-&kp C &kp C             &none        &tog 1        &tog 0        &none                     &none                  &none       &none &none &none &none &none
+             &reset     &none        &none         &none         &none        &none &none            &none &none &none &none        &none &none &none
+&out OUT_TOG      &kp C  &bt BT_CLR &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3 &bt BT_SEL 4 &none &none            &none &none &none &bt BT_SEL 0 &none &none &none &none
+&ext_power EP_TOG &kp C             &none        &none         &none         &none        &none &none      &none &none &none &none &none        &none &none &none &none
+&kp C             &kp C             &none        &none         &none         &none        &none &none      &none &none &none &none &none        &none       &none &none 
+&kp C             &kp C             &none        &none         &none         &none        &none &none            &none &none &none &none        &none &none &none &none 
+&ktrans           &kp C             &none        &tog 1        &tog 0        &none              &none                  &none       &none        &none &none &none &none
 			>;
 		};
 	};
