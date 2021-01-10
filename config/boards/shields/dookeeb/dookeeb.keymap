@@ -71,7 +71,7 @@
 &ext_power EP_TOG &kp C             &none        &none         &none         &none        &none &none      &none &none &none &none &none        &none &none &none &none
 &kp C             &kp C             &none        &none         &none         &none        &none &none      &none &none &none &none &none        &none       &none &none 
 &kp C             &kp C             &none        &none         &none         &none        &none &none            &none &none &none &none        &none &none &none &none 
-&ktrans           &kp C             &none        &tog 1        &tog 0        &none              &none                  &none       &none        &none &none &none &none
+&trans           &kp C             &none        &tog 1        &tog 0        &none              &none                  &none       &none        &none &none &none &none
 			>;
 		};
 	};
