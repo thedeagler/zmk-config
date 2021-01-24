@@ -31,6 +31,7 @@
 		label = "KSCAN";
 
 		diode-direction = "col2row";
+		debounce-period = 7;
 	};
 };
 
