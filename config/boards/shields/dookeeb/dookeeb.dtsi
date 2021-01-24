@@ -31,9 +31,12 @@
 		label = "KSCAN";
 
 		diode-direction = "col2row";
-		debounce-period = 7;
 	};
 };
+
+&kscan0 {
+	debounce-period: 7;
+}
 
 &pro_micro_i2c {
 	status = "okay";
