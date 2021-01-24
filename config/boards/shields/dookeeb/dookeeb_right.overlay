@@ -32,5 +32,5 @@
 		, <&pro_micro_d 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // r5
 		;
 
-	debounce-period: 7;
+	debounce-period = 7;
 };
